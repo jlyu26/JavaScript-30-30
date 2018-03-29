@@ -21,3 +21,15 @@ var a = 'hello world!';
 function b() {
 	console.log('called b!');
 }
+
+
+////////////////////////////////////////////////////////////////////////
+
+console.log(a);
+console.log(b);
+
+var a = 'hi there';
+let b = 'bye' 
+
+// undefined
+// ReferenceError: b is not defined
