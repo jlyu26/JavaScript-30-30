@@ -10,6 +10,8 @@
 // is placed into memory space, but when it comes to variables like 'a' below,
 // it doesn't know it's value until it starts executing its code, so instead, it
 // puts a placeholder called 'undefined'.
+
+
 // ** All variables in JavaScript are initially set to 'undefined'.
 
 b();	// 'called b!'
@@ -33,3 +35,26 @@ let b = 'bye'
 
 // undefined
 // ReferenceError: b is not defined
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+
+// Hoisting functions works differently than variables. 
+// Since a function is declared and defined at the same time, the 
+// function definition is hoisted along with the function name.
+// Because functions are hoisted after variables, naming conflicts can happen.
+
+
+a();	// TypeError: a is not a function
+console.log(a);	// undefined
+
+var a = 'hi';
+function a() {
+	console.log('bye');
+}
+
+a();	// 'bye'
+console.log(a);	// [Function: a]

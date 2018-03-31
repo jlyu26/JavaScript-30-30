@@ -4,7 +4,7 @@
 // In JavaScript, variable and functions are all hoisted to
 // the top of the scope that they're declared in. So hoisting
 // is basically the process in which the JavaScript interpreter
-// looks ahead in the code to find all of the variabe and unction
+// looks ahead in the code to find all of the variabe and function
 // declarations and then hoists those declarations to the top
 // of the file.
 
