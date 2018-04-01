@@ -23,4 +23,4 @@ spanish.greet = 'Hola';
 // inside them don't collide with other JavaScript files, or 
 // variables in the global namespace, etc.
 
-// keyword: 命名冲突
+// keyword: 命名冲突 (IIFEs 原理类似)

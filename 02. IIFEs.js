@@ -13,10 +13,12 @@
 // Why are they used?
 // The main reason to use an IIFE is to preserve a **priviate scope**
 // within your function. Inside of JS code to make sure not overriding
-// any global variables.
+// any global variables. (Because variables created inside an IIFE go
+// into that function's execution context variable environment, not into
+// the global.)
 
-// Wrap intire JS file inside of an big IIFE, and place all of your functionality
-// inside of it.
+// Wrap intire JS file inside of an big IIFE, and place all of your
+// functionality inside of it.
 (function() {
   
 	function getTotal(a, b) {
