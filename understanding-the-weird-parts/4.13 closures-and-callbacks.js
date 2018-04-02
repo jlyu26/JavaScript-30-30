@@ -1,3 +1,33 @@
+// What is callback function?
+
+// A function you give to another function, to be run when the
+// other function is finished.
+// You tell a function: 'Here, take this function, when you're done 
+// working, call the function I just gave you.' So the function you
+// call (i.e. invoke), 'calls back' by calling the function you gave 
+// it when it finishes.
+
+
+function tellMeWhenDone(callback) {
+	console.log('I\'m done, now let\'s run the call back!');
+	console.log('------');
+
+	callback();
+}
+
+tellMeWhenDone(function() {
+	console.log('I\'m the call back!');
+});
+
+// I'm done, now let's run the call back!
+// ------
+// I'm the call back!
+
+
+
+
+
+
 // 国内面试题
 
 // What's the output of the following code?
@@ -14,13 +44,21 @@ for (var i = 0; i < 5; i++) {
 // 因为scope chain，闭包只能取得包含函数变量中任何变量的最后一个值
 // 两种方法可以让闭包的行为符合预期：
 
-// 1. 用let生命i，创建block chain
+// 1. 用let声明i，创建block chain
 for (let i = 0; i < 5; i++) {
 	setTimeout(function() {
 		console.log(i);
 	}, 1000 * i)
 }
-// 开始输出0，再每个1s以此输出1，2，3，4
+
+// 等价于：
+for (var i = 0; i < 5; i++) {
+	let j = i;
+	setTimeout(function() {
+		console.log(j);
+	}, 1000 * j);
+}
+// 开始输出0，再每个1s依次输出1，2，3，4
 
 // 2. 创建IIFE
 for (var i = 0; i < 5; i++) {

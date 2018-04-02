@@ -41,12 +41,22 @@ outterFunc('param two');
 // protect variables from being on the global scope.
 
 
+
+////////////////////////////////////////////////////////////////////////
+
+
+
 // Where to use closure? (1p3a面经)
 
-// Situations where you might want to do this are particularly common 
-// on the web. Much of the code we write in web JavaScript is event-based 
-// — we define some behavior, then attach it to an event that is 
-// triggered by the user (such as a click or a keypress). Our code is generally 
-// attached as a callback: a single function which is executed in response 
-// to the event. Closures for events and callbacks. This is where closures 
-// are the most useful. 
+// In event listeners as callback: 
+// We define some behavior in a function, then attach it to an
+// event that is triggered by the user (e.g. a click) as a callback.
+// Here closure is a single function which is executed in response
+// to the event. So closures for events listeners as callbacks is 
+// where closures are the most commonly used.
+
+
+// MUST READ: (everything about closure is covered)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+// Also, see 12.counter-function.js
